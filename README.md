@@ -2,14 +2,14 @@
 
 
 This repository contains an basic implementation of a Multi-Agent IT Helpdesk System that combines Advanced Retrieval-Augmented Generation (RAG) techniques with a Human-in-the-Loop (HITL) workflow. The system is designed to deliver accurate, context-aware responses for IT support while ensuring oversight and continuous improvement through human feedback.
-The advanced RAG framework incorporates query optimization, retrieval, relevance assessment, and reranking to enhance query processing. The architecture consists of three primary agents, each designed to perform specific tasks to efficiently handle user queries.
+The advanced RAG framework incorporates query optimization, retrieval, relevance assessment, and reranking to enhance query processing. 
 
 
 The multi-agent architecture powering this IT Helpdesk system is designed for scalability, efficiency, and human oversight. Below is the visual representation:
 ![architecture](https://github.com/user-attachments/assets/4eee2dd0-ac46-45c9-8ebd-c4559e3095a0)
 
 
-
+The architecture consists of three primary agents, each designed to perform specific tasks to efficiently handle user queries.
 **Intake Agent:** This agent receives the user query and transforms it into an interpretable, optimized form. It ensures that the query is structured in a way that enables effective processing by subsequent agents.
 **Coordinator Agent:** Acting as a router, the coordinator agent evaluates the query and directs it to either the Resolution Agent or the Escalation Agent based on the severity and impact of the request. It determines whether the query is resolvable by the user or requires escalation to a more advanced process.
 **Resolution Agent:** This agent connects to a vector database through a retrieval tool, employing an agentic RAG mechanism to process the user request. It uses this mechanism to retrieve relevant context from the database. If pertinent context is retrieved, the Resolution Agent generates a response to resolve the query. If the necessary context is not found, the query is forwarded to the Escalation Agent.
